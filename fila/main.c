@@ -29,7 +29,7 @@ No remover(No **lista){
 		
 		
 		*lista = temp->proximo;
-		printf("Removido: %s",temp->nome);
+		printf("Removido: %s\n",temp->nome);
 		return *temp;
 			
 	}else{
@@ -38,9 +38,8 @@ No remover(No **lista){
 }
 
 void listar(No **lista){
-	No *aux = (No*) malloc(sizeof(No));
-	
-	aux = *lista;
+	No *aux = *lista;
+
 	while(aux != NULL){
 		printf("Nome: %s\n",aux->nome);
 		aux = aux->proximo;
